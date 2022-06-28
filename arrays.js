@@ -29,3 +29,30 @@ nombreDelArray
 
 //Ejemplo de array con Strings
 var frutas = ["Manzana", "Platano", "Cereza", "Fresa", "Mango"];
+
+
+
+//Metodos de recorridos de Arrays
+/*Podemos crear arrays con objetos como...*/
+var articulos = [
+    { nombre: "Bici", costo: 3000},
+    { nombre: "Tv", costo: 2500},
+    { nombre: "Libro", costo: 320},
+    { nombre: "Celular", costo: 10000},
+    { nombre: "Laptop", costo: 20000},
+    { nombre: "Teclado", costo: 500},
+    { nombre: "Audifonos", costo: 1700},
+];
+//Con esta formula podemos crear un nuevo array y filtrar ciertos objetos, en este caso seria por precio
+var articulosFiltrados = articulos.filter(function(articulo){return articulo.costo <= 500;});
+//Y con esta formula podemos crear un nuevo array que nos diga el nombre de todos los objetos
+var nombreArticulos = articulos.map(function(articulo){return articulo.nombre});
+
+/*La formula es asi */
+var filtradoDeObjetos = articulos.filter(function(objeto){
+    return objeto.propiedad = /*| = | <= | => | != */ propiedad
+})
+
+var encuentraArticulo = articulos.find(function(articulo){return articulo.nombre === "Laptop"});
+
+articulos.forEach(function(articulo){console.log(articulo.nombre);});   
