@@ -1,8 +1,15 @@
-let d = document.getElementById("dibujo");
-let lienzo = d.getContext("2d");
+var texto = document.getElementById("texto_lineas");
+var boton = document.getElementById("boton");
+var reinicio = document.getElementById("botonReset");
 var l = 0; 
 var yi, xf;
-var yi2, xf2 = 500;
+var xi, yf;
+var c = 0;
+var d = document.getElementById("dibujo");
+var lienzo = d.getContext("2d");
+var ancho = d.width; 
+boton.addEventListener("click", dibujoPorClick);
+botonReset.addEventListener("click", resetPorClick);
 
 function crearLinea(color, xinicial, yinicial, xfinal, yfinal)
 {
@@ -13,30 +20,50 @@ function crearLinea(color, xinicial, yinicial, xfinal, yfinal)
     lienzo.stroke();
     lienzo.closePath();
 }
+
 crearLinea("black", 1, 1, 1, 499);
 crearLinea("black", 1, 499, 499, 499);
 crearLinea("black", 499, 499, 499, 1);
 crearLinea("black", 499, 499, 1, 1);
 
-for(l = 0; l < 500; l++)
-{
-    yi = 10 * l;
-    xf = 10 * (l++);
-    crearLinea("blue", 0, yi, xf, 500);
+function dibujoPorClick(){
+    var lineas = parseInt(texto.value);
+    var espacio = ancho / lineas;
+
+    for(l = 0; l < 500; l++)
+    {
+        yi = espacio * l;
+        xf = espacio * (l++);
+        crearLinea("blue", 0, yi, xf, 500);
+    }
+
+    for(l = 0; l < 500; l++)
+    {
+        yi = espacio * l;
+        xf = espacio * (l++);
+        crearLinea("red", 500, yi, xf, 0);
+    }
 }
 
 
-for(l = 0; l < 500; l++)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for(l = 1; l < 500; l + 10)
 {
-    yi = 10 * l;
-    xf = 10 * (l++);
-    crearLinea("red", 500, yi, xf, 0);
+    yi = 500 * l;
+    xf = 10;
+    crearLinea("green", 0, yi, xf, 0);
 }
-/*
-var l =
-for(l = 490; l < 500; l++)
-{
-    yi = l + 10;
-    xf = (l++) + 10;
-    crearLinea("green", 0, yi, 0, xf);
-}*/
