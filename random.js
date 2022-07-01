@@ -3,8 +3,6 @@ var boton = document.getElementById("boton");
 var reinicio = document.getElementById("botonReset");
 var l = 0; 
 var yi, xf;
-var xi, yf;
-var c = 0;
 var d = document.getElementById("dibujo");
 var lienzo = d.getContext("2d");
 var ancho = d.width; 
