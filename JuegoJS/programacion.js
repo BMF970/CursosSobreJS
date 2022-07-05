@@ -1,5 +1,6 @@
 var vp = document.getElementById("villaPlatzi");
 var papel = vp.getContext("2d");
+var cantidad = aleatorio(1,50);
 
 var fondo = {
     url: "archivos/Granja.png",
@@ -25,11 +26,13 @@ function dibujar(){
         papel.drawImage(fondo.imagen, 0, 0);
     }
     if(vaca.cargaOk){
-        for(var v = 0; v < 10; v++){
-            var x = aleatorio(0, 420);
-            var y = aleatorio(0, 420);
-            papel.drawImage(vaca.imagen, x, y);
-        }
+        for( var v = 0; v < 10; v++)
+		{
+			var x = aleatorio (0, 420);
+			var y = aleatorio (0, 420);
+			papel.drawImage(vaca.imagen , x , y);
+			console.log(v);
+		}
     }
 }
 
@@ -59,6 +62,6 @@ var z;
 function aleatorio(min, max)
 {
     var resultado;
-    resultado = Math.floor(Math.random() * (min - max + 1)) + min;
+    resultado = Math.floor(Math.random() * (max - min + 1)) + min;
     return resultado;
 }
