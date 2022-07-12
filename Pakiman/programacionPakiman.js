@@ -1,3 +1,4 @@
+HEAD
 var images =[];
 images["Cauchin"] = "vaca.png";
 images["Pokacho"] = "pollo.png";
