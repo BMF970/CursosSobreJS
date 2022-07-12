@@ -40,3 +40,5 @@ Recuerda:
     Para agregar soporte a tildes y letras especiales puedes usar <meta charset=“utf-8”> dentro de head
 
     Cuándo quieres depurar un programa puedes usar console.log para ver mensajes en la consola
+
+Una clase nos permite definir una colección de objetos permitiendo que estos posean los mismos atributos y métodos.
