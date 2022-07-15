@@ -6,6 +6,7 @@ function objeto(propiedad1, propiedad2, propiedad3, propiedadetc){
     this.propiedad3 = propiedad3;
     this.propiedadetc = propiedadetc;
 }
+
 /*En la funcion "car", tenemos como parametro las propiedades que como objeto queremos que tenga
 es decir: en este objeto queremos que tenga las propiedades de marca, modelo y año por que es un coche/auto/carro*/
 function car(brand, model, annio){
@@ -13,6 +14,7 @@ function car(brand, model, annio){
     this.brand = brand;
     /*y aqui tenemos que agregar las funciones constructoras, para evitar hacer objeto por objeto (coche)*/
 }
+
 //Esta seria la plantilla con las propiedades del carro/coche y quedaria asi...
 function car(brand, model, annio){
     this.brand = brand;
