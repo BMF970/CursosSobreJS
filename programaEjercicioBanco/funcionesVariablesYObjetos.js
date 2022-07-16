@@ -6,6 +6,7 @@ class Billete{
 }
 
 var caja = [];
+
 var entregado = [];
 //dineroTotalEnBilletes
     var billete500 = new Billete(500, 9050);
