@@ -6,31 +6,28 @@ class Billete{
 }
 
 var caja = [];
-
 var entregado = [];
-var billete500 = new Billete(500, 2);
-var billete100 = new Billete(100, 2);
-var billete50 = new Billete(50, 2);
-var billete20 = new Billete(20, 2);
+//dineroTotalEnBilletes
+    var billete500 = new Billete(500, 9050);
+    var sumaDe500 = billete500.cantidad * billete500.valor;
+    caja.push(billete500);
+    
+    var billete200 = new Billete(200, 10000);
+    var sumaDe200 = billete200.cantidad * billete200.valor;
+    caja.push(billete200);
+    
+    var billete100 = new Billete(100, 20000);
+    var sumaDe100 = billete100.cantidad * billete100.valor;
+    caja.push(billete100);
 
-caja.push(billete500);
-caja.push(billete100);
-caja.push(billete50);
-caja.push(billete20);
+    var billete1000 = new Billete(1000, 8000);
+    var sumaDe1000 = billete1000.cantidad * billete1000.valor;
+    caja.push(billete1000);
 
+var dineroTotal=sumaDe500+sumaDe100+sumaDe200+sumaDe1000
 var dinero = 0;
 var div = 0;
 var papeles = 0;
-/*
-var sumaDe500 = billete500.cantidad * billete500.valor;
-var sumaDe100 = billete100.cantidad * billete100.valor;
-var sumaDe50 = billete50.cantidad * billete50.valor;    
-var sumaDe20 = billete20.cantidad * billete20.valor;*/
-var dineroTotal = Math.floor();
-for (var todosLosBilletes of caja){
-    Math.floor(todosLosBilletes.valor * todosLosBilletes.cantidad);
-}
-
 
 function entregarDinero()
 {
@@ -49,7 +46,7 @@ function entregarDinero()
                 papeles = div;    
             }
             entregado.push(new Billete(bi.valor, papeles));
-            dinero = dinero - (bi.valor * papeles);
+            dinero -= (bi.valor * papeles);
         }
     }
 
@@ -60,7 +57,7 @@ function entregarDinero()
     }else{
         for(var e of entregado);{
             if(e.cantidad > 0){
-                resultado.innerHTML = resultado.innerHTML + e.cantidad + "billetes de $" + e.valor + "<br/>";
+                resultado.innerHTML += e.cantidad + "billetes de $" + e.valor + "<br/>";
             }
         }
     }
@@ -68,5 +65,4 @@ function entregarDinero()
 
 var resultado = document.getElementById("resultado");
 var e = document.getElementById("extraer");
-//parseInt("dinero");
 e.addEventListener("click", entregarDinero);

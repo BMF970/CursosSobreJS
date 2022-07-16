@@ -1,0 +1,11 @@
+body{
+    background: img/muro-cemento.jpg;
+}
+img{
+    width: 70vw;
+    height:50vh;
+}
+figure, div, h2, h1{
+    text-align: center;
+
+}
