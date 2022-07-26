@@ -19,9 +19,13 @@ html{
     color: blueviolet;
  
 }
+.subtitulo{
+    color: beige;
+
+}
 
 .tarjetas-de-mokepon{
-    width: 100px;
+    width: 250px;
     height: 100px;
     background-color: aquamarine;
     padding: 10px;
@@ -39,4 +43,26 @@ html{
 
 input{
     display: none;
-    }
+}
+#seleccionar-ataque{
+    flex-direction: column;
+    align-items: center;
+}
+
+#boton-mascota{
+    width: 100px;
+    height: 40px;
+    border-radius: 20%;
+    background: transparent;
+    border: 2px solid snow;
+    color: wheat;
+    margin: 2%;
+}
+
+.boton-de-ataque{
+    color: whitesmoke;
+    box-sizing: border-box;
+    border-radius: 20%;
+    border-color: aliceblue;
+    background-color: transparent;
+}
