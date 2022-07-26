@@ -1,4 +1,42 @@
 html{
     background-color: cornflowerblue;
-    text-align: center;
+    
 }
+
+#seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjetas{
+    display: flex;
+    gap: 10px;
+}
+
+.titulo{
+    color: blueviolet;
+ 
+}
+
+.tarjetas-de-mokepon{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+}
+
+.tarjetas-de-mokepon img{
+    width: 80px;
+}
+
+input{
+    display: none;
+    }
