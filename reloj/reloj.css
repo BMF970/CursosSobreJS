@@ -1,0 +1,21 @@
+html{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+div{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black ;
+        
+    color:saddlebrown;
+}
+
+
