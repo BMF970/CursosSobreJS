@@ -24,6 +24,9 @@ var quitarPrimerElemento = nombreDelArray.shift(/*Aqui se puede poner en blanco,
 /*Con la extension .indexof podremos conocer la posicion de un elemento en especifico en un array*/
 var posicionDelElemento = nombreDelArray.indexOf(/*Aqui colocar el elemento*/);
 
+//con el metodo .includes podremos conocer y verificar si se encuentra una letra o un elemento en un array
+var elementoABuscar = nombreDelArray.includes(/*Aqui ponemos el valor que queremos buscar */)
+
 /*Solo necesitamos poner el nombre del array para poder imprimir este*/
 nombreDelArray
 

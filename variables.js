@@ -37,6 +37,12 @@ function nombreCompleto(nombre){
 }
 nombreCompleto(miNombre);
 //y asi seria la mejor manera de juntar palabras sin usar el  + `  ` + etc etc
+
+//La manera correcta de usar potencias en JS es con un **... por ejemplo
+let base = 3;
+let exponente = 3;
+let potencia = base ** exponente;
+console.log(potencia)
 /*
 Scope:
     El scope basicamente es el alcance que tienen las variables
