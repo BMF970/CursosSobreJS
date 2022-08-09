@@ -18,13 +18,25 @@ var persona = {
 }
 console.log(persona)
 
-
+/*
+Esta manera es una mala practica y no encaja en ECMAScript6
 var miNombre = "Brian";
     function nombre(){
         var miApellido = "Martinez Flores";
         console.log(miNombre + " " + miApellido);
     }
     nombre();
+Ahora se tiene que poner asi...
+*/
+let miNombre = "brian"
+function nombreCompleto(nombre){
+    let apellidoPaterno = "Martinez"
+    let apellidoMaterno = "Flores"
+    let nombreCompleto = `${miNombre} ${apellidoPaterno} ${apellidoMaterno}`
+    console.log(nombreCompleto)
+}
+nombreCompleto(miNombre);
+//y asi seria la mejor manera de juntar palabras sin usar el  + `  ` + etc etc
 /*
 Scope:
     El scope basicamente es el alcance que tienen las variables
