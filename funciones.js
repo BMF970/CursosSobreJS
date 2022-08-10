@@ -42,3 +42,13 @@ Suma(1,2,3);
 /*nos traera como resultado 6. pues la funcion "suma"
  ya se encargo de no solo sumar los 3 parametros si no
  de regresar el resultado*/
+
+
+ 
+//Para importar archivos con funciones o funciones de otros archivos tenemos que usar la siguiente linea de codigo 
+
+/*Esta es la ultima version en nodejs, si no sirve usar la de abajo, la "vieja sintaxis"
+import aleatorio from `./modulos.js`*/
+
+const aleatorio = require(`./modulos`)
+console.log(aleatorio(1, 3));
