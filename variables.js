@@ -42,7 +42,32 @@ nombreCompleto(miNombre);
 let base = 3;
 let exponente = 3;
 let potencia = base ** exponente;
-console.log(potencia)
+console.log(potencia);
+
+//Si tenemos espacios al final o al principio de un array podemos eliminarselos con 2 metodos y estos son...
+
+//Espacios al principio del array -> trimStart()
+    let saludoConEspasiosAlInicio = `          Hello world`;
+    console.log(saludoConEspasiosAlInicio);
+    console.log(saludoConEspasiosAlInicio.trimStart(/*Tenemos que colocar parentesis*/));
+
+//Tambien podriamos crear otra variable para quitarles el espaciado del principio, pues si volvemos a imprimir "saludo" seguira teniendo los espacios
+
+    console.log(saludoConEspasiosAlInicio);
+    let saludoSinEspacios = saludoConEspasiosAlInicio.trimStart();
+    console.log(saludoSinEspacios);
+
+//Espacios al principio del array -> trimEnd()
+    let saludoConEspaciosAlFinal = `hello world          `;
+    console.log(saludoConEspaciosAlFinal);
+    console.log(saludoConEspaciosAlFinal.trimEnd())
+
+//Igual que con trimStart podemos crear otra variable a partir de esta que ya tenga la funcion, subrayar en consola para tener un mejor ejemplo
+
+    console.log(saludoConEspaciosAlFinal);
+    let saludoSinEspaciosAlFinal = saludoConEspaciosAlFinal.trimEnd();
+    console.log(saludoSinEspaciosAlFinal)
+    
 /*
 Scope:
     El scope basicamente es el alcance que tienen las variables
