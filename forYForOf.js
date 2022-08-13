@@ -15,3 +15,29 @@ for(int i = 10; i >= 1; i--){
         console.log(i + "X" + j + "=" + i*j);
     }
 }
+
+//Existen otros 3 tipos de for que se pueden utilizar para diferentes cosas, por ejemplo...
+    //Foreach/ For each, lo que hace este for es recorrer cada elemento de aquello que ocupemos, arreglo, matriz etc,
+
+        let x =[
+            `palabra`,
+            `palabra2`,
+            `palabra3`,
+            `palabra4`,
+            `palabra5`
+        ]
+
+    /* x = el arreglo, matriz, etc que queramos recorrer, */
+
+        x.forEach(element => {
+            console.log(element)
+        });
+
+    //Forin/ For in
+
+
+    //Forof/ For of
+
+    for (const iterator of object) {
+        
+    }
