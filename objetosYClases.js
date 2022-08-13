@@ -27,3 +27,27 @@ const persona = {
 
 console.log(persona["nombre"]);
 /*                 ^ se puede utilizar esto, pero lo mas comun es usar el punto (osea persona.nombre) aunque hay ocaciones donde si se tiene que hacer asi estrictamente*/
+
+//Si tenemos un objeto de multiples caracteristicas independientes, podemos hacer una matriz de las propiedades de este objeto con el metodo .entries...
+
+    // Object.entries 
+    const data = {
+        frontend: 'Juan',
+        backend: 'Carlos',
+        design: 'Ana'
+    }
+
+    //Aqui lo que hacemos es una matriz de las propiedades y valores que tiene el objeto "data"
+    const entries = Object.entries(data);
+    //Aqui lo imprimimos
+    console.log(entries);
+    
+    //Aqui creamos un array que nos da como elementos las propiedades del objeto
+    const key = Object.keys(data);
+    //Aqui lo imprimimos
+    console.log(key);
+
+    //Aqui creamos un array que nos da los valores del objeto
+    const values = Object.values(data);
+    //Aqui lo imprimimos
+    console.log(values);
