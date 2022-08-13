@@ -5,7 +5,9 @@ class nuevaClase{//la clase es la definicion de un objeto| una clase es una plan
         this.mensaje = "Este es un mensaje";
     }
     agregarNuevosMetodos(){//asi se agregan metodos. (al parecer hay otra forma de hacer metodos *pendiente*)
-}
+    }
+    #metodoPrivado(){//Ahora podemos poner los metodos en privado para que fuera de este no se pueda usar, ayuda a la seguridad general 
+    }
 }
 //Los atributos no son mas que las variables de un objeto
 /*dentro de un objeto a las variables se le van a llamar atributos/propiedades y a las funciones se les llama metodos*/

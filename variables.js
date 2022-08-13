@@ -67,7 +67,31 @@ console.log(potencia);
     console.log(saludoConEspAlFin);
     let saludoSinEspaciosAlFinal = saludoConEspAlFin.trimEnd();
     console.log(saludoSinEspaciosAlFinal)
+  
+//Para numeros enteros mayores a la 2^53 podemos trabajar de 2 formas...
+    //Una seria agregando una "n" al final del numero por ejemplo...
+    let aBigNumber = 98987496746541305489679846210324684630035416n;
+    console.log(aBigNumber);
+    //La otra seria asignar el numero asi...
+    let anotherBigNumber = BigInt(98987496746541305489679846210324684630035416);
+    console.log(anotherBigNumber);
+
+//Metodos que podemos usar/aplicar en variables
+
+//Con el metodo replace podemos encontrar coincidencias en palabras y reemplasarlas por otras, por ejemplo...
+
+    //Imprimir este bloque de codigo para un mejor ejemplo
     
+    const mensaje = "JavaScript es maravilloso, con JavaScript puedo crear el futuro de la web.";
+    const replacedString = mensaje.replace("JavaScript", "Python");
+    
+    //<<< const nuevaVariable = x/*x = variable que queremos modificar*/.replace/*Metodo .replace*/(/*Primera palabra es la que queremos cambiar, es necesario escribir la palabra exacta, si tiene mayusculas en medio o cualquier cosa, palabra EXACTA*/, /*La segunda palabra es aquella que va a ser cambiada*/);
+    
+    //Este es el mensaje original...
+    console.log(mensaje);
+    //Y este es el mensaje modificado, para cambiar todas las palabras "javaScript" por python...
+    console.log(replacedString);
+
 /*
 Scope:
     El scope basicamente es el alcance que tienen las variables

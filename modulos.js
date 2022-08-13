@@ -9,6 +9,7 @@ function aleatorio(min, max) {
 /*Esta es la ultima version en nodejs, si no sirve usar la de abajo, la "vieja sintaxis"
     export default aleatorio;
 */
+
 module.exports = aleatorio
 
 //Y con esta linea marcamos la importacion del archivo, la tenemos que poner en el archivo que queramos usar y con la ruta de este archivo por ejemplo...

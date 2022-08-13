@@ -42,3 +42,7 @@ Recuerda:
     Cuándo quieres depurar un programa puedes usar console.log para ver mensajes en la consola
 
 Una clase nos permite definir una colección de objetos permitiendo que estos posean los mismos atributos y métodos.
+
+Qué es la importación dinámica
+
+La importación dinámica consiste en cargar los módulos cuando el usuario los vaya a utilizar, y no al iniciar la aplicación. Esto permite que la página web sea más rápida, porque descarga menos recursos.
