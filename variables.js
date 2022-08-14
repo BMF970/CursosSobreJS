@@ -91,6 +91,20 @@ console.log(potencia);
     console.log(mensaje);
     //Y este es el mensaje modificado, para cambiar todas las palabras "javaScript" por python...
     console.log(replacedString);
+    
+//El padding consiste en rellenar un string por el principio o por el final, con el carácter especificado, repetido hasta que complete la longitud máxima, si la cantidad de longitud maxima es menor a la del propio strin no agregara nada, podemos agregar "padding" al...
+    //Principio -> .padStart()
+    const abc =`abc`;
+    const abcGuiones = abc.padStart(10, `-·`)
+    //const nuevaVariable = variableConLaCadenaQueVamosAModificar.padStart(10 < Cantidad de caracteres(mayores al string), `-`< Caracter o caracteres que queremos mostrar)
+    
+    console.log(abcGuiones)
+    
+    //Final -> .padEnd();
+    const abcd =`abcd`;
+    const abcdGuiones = abcd.padEnd(10, `-·`)
+    console.log(abcdGuiones)
+
 
 /*
 Scope:

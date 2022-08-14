@@ -34,7 +34,7 @@ console.log(persona["nombre"]);
     const data = {
         frontend: 'Juan',
         backend: 'Carlos',
-        design: 'Ana'
+        design: 'Ana',/*<<< Ahora podemos hacer uso de trailling comas, lo que permite hacer uso de esta ultima coma y que no haya errores */
     }
 
     //Aqui lo que hacemos es una matriz de las propiedades y valores que tiene el objeto "data"
@@ -51,3 +51,7 @@ console.log(persona["nombre"]);
     const values = Object.values(data);
     //Aqui lo imprimimos
     console.log(values);
+
+    //Tambien podemos saber la cantidad de elementos que tiene el objeto de la siguiente manera
+    const entriesL = entries.length;
+    console.log(entriesL);
