@@ -59,8 +59,52 @@ Básicamente tenemos 4 formas de leer nodos con JS:
 PEEEEEEERO, tienen un problema de seguridad el problema con estas formas de inserciones es que permiten la inserción XSS, es decir, código maligno, y cualquier usuario programador malicioso podría meter scripts molestos, imagina que cada que un usuario llegue a tu página le salga un alert… ¡Sería catastrófico! Siempre sanitiza (remover caracteres especiales) los inputs de tus usuarios, se podrian usar de la siguiente manera...
 */
 
+/*
+Eliminacion de nodos
+Para la agregacion de noos usamos 2 metodos fundamentales para el DOM, estos son...
+    ·parentElement.removeChild()
+    ·document.remove()<<< Hay que usar este, es mas sencillo rapido y menos revoltoso
+Y hay un tercero que no elimina pero se puede implementar para algo parecido...
+    ·document.replaceChild()
+Ejemplos...
+*/
 
+/*
+    ·parentElement.removeChild: Necesitamos una referencia y un nodo a eliminar, Referencia === padre directo.
+    Por ejemplo: si hay un...
+        <body>
+            <div>
+                <h1>Aprendiendo programacion con el lenguaje JS</h1>
+                <p>Cuantas lineas quieres?</p>
+                <input type="text" id="texto_lineas"/>
+                <input type="button" value="A darle!" id="boton"/>
+                <input type="button" value="Reset" id="botonReset"/><br><br>
+                <canvas width="500" height="500" id="dibujo"></canvas>
+                <script src="random.js"></script>
+            <div>
+        </body>
+    y queremos eliminar el <h1> o el <p> la referencia(padre) seria div, y no el padre pues aunque <body> es padre no es el padre directo, podriamos guardar en una variable el padre directo (div), al nodo a eliminar y expresarlo asi...
+*/
+    const nodoToRemove = "<h1>Aprendiendo programacion con el lenguaje JS</h1>"; /*Usar el hack $0 para almacenar*/
+    const fatherReference = "<div>...</div>";
+    fatherReference.removeChild(nodoToRemove);
+/*
+Para usar el .remove(), es mas simple, simplemente nos aseguramos de obtener la referencia y ponemos .remove() 
+*/
+    const crearDiv = document.createElement("div");
+    const crearH1 = document.createElement("h1");
+    const crearP = document.createElement("p");
+    const textoDePrueba = document.createTextNode("p de prueba");
+    document.body.appendChild(crearDiv);
+    crearDiv.append(crearH1);
+    crearDiv.append(crearP);
+    crearP.appendChild(textoDePrueba);
+    crearH1.appendChild(textoDePrueba);
 
+    //Comprobar aqui que se haya creado todo correctamente y luego borramos con...
+    
+    crearH1.remove()
+//      ^   Aqui pondremos el elemento/nodo que querramos eliminar, pues si ponemos crearDiv.remove() se eliminara todo alv, incluyendo el h1 y el p
 
 //Una de las formas de convertirlos a array es la vista en la clase:
 
