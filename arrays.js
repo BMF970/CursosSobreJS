@@ -68,4 +68,14 @@ solo que se agregara hasta el final*/
 
     let encuentraArticulo = articulos.find(function(articulo){return articulo.nombre === "Laptop"});
 
-    articulos.forEach(function(articulo){console.log(articulo.nombre);});   
+    articulos.forEach(function(articulo){console.log(articulo.nombre);});
+
+/*Un nodelist tiene valores y metodos que un array si tiene, que nos pueden dificultar trabajar con informacion en volumen o aplicar algoritmos*/
+//Una de las formas de convertirlos a array es la vista en la clase:
+
+    const nodeListAsArray = [...nombreDelNodeList];
+    
+//Sin embargo, otra forma es
+    
+    const nodeListArray = Array.from(nombreDelNodeList);
+    
