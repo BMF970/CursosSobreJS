@@ -14,7 +14,53 @@ Básicamente tenemos 4 formas de leer nodos con JS:
     Casi siempre el elemento “padre o parent” es document. ya que estamos haciendo referencia a todo el DOM, todo el documento y esto en ciertos casos nos permite evitar errores.
     ejemplo = const button = document.querySelector(’#button)
 
-    */
+*/
+/*
+    Crear != agregar.
+    funciona masomenos como las variables o las funciones, si no las usamos o las mandamos llamar no van a hacer nada pues estan creadas pero no hemos hecho nada con ellas
+    Para crear elementos necesitamos el siguiente codigo document.CreateElement, por ejemplo...
+*/
+
+    document.createElement("div"/*Aqui podemos agregar una etiqueta*/);
+
+/*  
+    Para la creacion de texto usamos document.createTextNode 
+*/
+    
+    document.createTextNode("Texto de prueba");
+
+/*
+    Para la agregacion de noos usamos 4 metodos fundamentales para el DOM, estos son
+        ·document. / parentElement.appendChild
+        ·document. / parentElement.append
+        ·document. / parentElement.insertBefore
+        ·document. / parentElement.insertAdjacentElement
+
+    parentElement == al lugar donde queremos que agregue las cosas, por ejemplo...
+
+*/
+
+    const texto = document.createTextNode(`Aqui va un texto`);
+    div.apendChild(texto)
+
+//obviamente si ya hay un div creado o podriamos crearlo y ponerle una clase y pasarle la clase en vez de poner div o un ID etc; Ejecutar en about:blank para el ejemplos
+
+        const crearP = document.createElement("p");
+        const textoDePrueba = document.createTextNode("p de prueba");
+        document.body.appendChild(crearP);
+        crearP.appendChild(textoDePrueba);
+
+//Existen otras formas de agregar nodos:
+
+    node.outerHTML/*:Sirve para leer HTML para leer HTML*/
+    node.innerHTML/*:Sirve para escribir HTML*/
+
+/*
+PEEEEEEERO, tienen un problema de seguridad el problema con estas formas de inserciones es que permiten la inserción XSS, es decir, código maligno, y cualquier usuario programador malicioso podría meter scripts molestos, imagina que cada que un usuario llegue a tu página le salga un alert… ¡Sería catastrófico! Siempre sanitiza (remover caracteres especiales) los inputs de tus usuarios, se podrian usar de la siguiente manera...
+*/
+
+
+
 
 //Una de las formas de convertirlos a array es la vista en la clase:
 
