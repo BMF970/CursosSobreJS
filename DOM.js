@@ -45,6 +45,7 @@ Básicamente tenemos 4 formas de leer nodos con JS:
 
 //obviamente si ya hay un div creado o podriamos crearlo y ponerle una clase y pasarle la clase en vez de poner div o un ID etc; Ejecutar en about:blank para el ejemplos
 
+<<<<<<< HEAD
         const crearP = document.createElement("p");
         const textoDePrueba = document.createTextNode("p de prueba");
         document.body.appendChild(crearP);
@@ -112,6 +113,12 @@ Para usar el .remove(), es mas simple, simplemente nos aseguramos de obtener la 
     
     crearH1.remove()
 //      ^   Aqui pondremos el elemento/nodo que querramos eliminar, pues si ponemos crearDiv.remove() se eliminara todo alv, incluyendo el h1 y el p
+=======
+    const crearP = document.createElement("p");
+    const textoDePrueba = document.createTextNode("p de prueba");
+    document.body.appendChild(crearP);
+    crearP.appendChild(textoDePrueba);
+>>>>>>> 4f250359b4ba7136d707ebc993fc632e2849e599
 
 //Una de las formas de convertirlos a array es la vista en la clase:
 
