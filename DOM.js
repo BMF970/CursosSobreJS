@@ -9,7 +9,7 @@ Básicamente tenemos 4 formas de leer nodos con JS:
     
     ·parent.querySelector() => nos permite buscar de 3 formas, con id, clase o tagName. A diferencia de los 2 anteriores este nos devuelve 1 solo elemento, el primero que contenga el valor que se le paso. Id => (’#id’), class => (’.class’), tagName (‘div’)
     
-    ·parent.querySelectorAll() => este método retorna una array list con todos los elementos que tengan ese selector (id, class o tagName), es necesario colocar como si fuera css, osea si es clase poner ".nombreDeLaClase", si es ID poner ".nombreDelID", etc
+    ·parent.querySelectorAll()[Aqui va el numero que usaremos] => este método retorna una array list con todos los elementos que tengan ese selector (id, class o tagName), es necesario colocar como si fuera css, osea si es clase poner ".nombreDeLaClase", si es ID poner ".nombreDelID", etc
 
     Casi siempre el elemento “padre o parent” es document. ya que estamos haciendo referencia a todo el DOM, todo el documento y esto en ciertos casos nos permite evitar errores.
     ejemplo = const button = document.querySelector(’#button)
@@ -80,14 +80,21 @@ Ejemplos...
                 <input type="button" value="A darle!" id="boton"/>
                 <input type="button" value="Reset" id="botonReset"/><br><br>
                 <canvas width="500" height="500" id="dibujo"></canvas>
-                <script src="random.js"></script>
+                <script src="script.js"></script>
             <div>
         </body>
     y queremos eliminar el <h1> o el <p> la referencia(padre) seria div, y no el padre pues aunque <body> es padre no es el padre directo, podriamos guardar en una variable el padre directo (div), al nodo a eliminar y expresarlo asi...
 */
-    const nodoToRemove = "<h1>Aprendiendo programacion con el lenguaje JS</h1>"; /*Usar el hack $0 para almacenar*/
+    const nodoToRemove = "<h1>Aprendiendo programacion con el lenguaje JS</h1>"; /*Usar el hack $0 para almacenar mas rapido(sin tener que usar el gEB o sQ)*/
     const fatherReference = "<div>...</div>";
     fatherReference.removeChild(nodoToRemove);
+/*
+sC === .selectQuery(All)[];
+gEB === getElementBy...;
+El tip de el tab + $0, es igual a guardar en una variable el nodo con un querySelector o GEBI o GEBC, siguiendo el ejemplo del codigo del archivo random.html seria...
+*/
+    const nodoCanvas = document.querySelectorAll(`#dibujo`);
+    nodoCanvas;
 /*
 Para usar el .remove(), es mas simple, simplemente nos aseguramos de obtener la referencia y ponemos .remove() 
 */
@@ -95,11 +102,11 @@ Para usar el .remove(), es mas simple, simplemente nos aseguramos de obtener la 
     const crearH1 = document.createElement("h1");
     const crearP = document.createElement("p");
     const textoDePrueba = document.createTextNode("p de prueba");
-    document.body.appendChild(crearDiv);
+    document.body.append(crearDiv);
     crearDiv.append(crearH1);
     crearDiv.append(crearP);
-    crearP.appendChild(textoDePrueba);
-    crearH1.appendChild(textoDePrueba);
+    crearP.append(textoDePrueba);
+    crearH1.append(textoDePrueba);
 
     //Comprobar aqui que se haya creado todo correctamente y luego borramos con...
     
@@ -114,3 +121,38 @@ Para usar el .remove(), es mas simple, simplemente nos aseguramos de obtener la 
     
     const nodeListArray = Array.from(nombreDelNodeList)
     
+    function creacion(tipo, cantidad/*referencia*/){
+        if(tipo === "div" && cantidad > 0){
+            for (let i = 0; i === cantidad; i++) {
+                const crearDiv = document.createElement("div");
+                document.body.append(crearDiv);
+            }  
+        }else{
+            for (let i = 0; i === cantidad; i++) {
+                const crearP = document.createElement("p");
+                document.body.append(crearP);
+            }
+        }
+    }
+    function crear(x, cantidad){
+        if (x ==  && cantidad > 0) {
+            const crearDiv = document.createElement("div");
+            document.body.append(crearDiv);
+        } else {
+            const crearP = document.createElement("p");
+            document.body.append(crearP);
+        }
+    }
+        /*for (let i = 0; i === cantidad; i++) {
+            switch (tipo) {
+                case tipo === `div`:
+                    const crearDiv = document.createElement("div");
+                    document.body.append(crearDiv);
+                    break;
+            default:
+                    const crearP = document.createElement("p");
+                    document.body.append(crearP);
+                    break;
+        }  
+        }*/
+    }
