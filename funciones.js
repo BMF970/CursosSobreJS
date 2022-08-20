@@ -40,11 +40,34 @@ function Suma(a,b,c){
 Suma(1,2,3);
 
 /*nos traera como resultado 6. pues la funcion "suma"
- ya se encargo de no solo sumar los 3 parametros si no
+ ya se encargo de no solo sumar 
+Curso JavaScript: 46. Callbacks - #jonmirchaos 3 parametros si no
  de regresar el resultado*/
 
+/*
+Fat arrow function(tambien se les conoce como funciones anonimas o como una expresion, pues la asignamos a una variable)
+*/
+    
+    const funcionX = () => {
+        //Aqui van los argumentos de la funcion
+    } 
 
- 
+/*Las podemos usar para quitarnos de las funciones simples, como retornar una suma, conseguir un numero aleatorio, etc, pues para funciones con un parametro y una linea de codigo son muy buenas.
+Siguiendo el ejemplo anterior una arrow function seria asi
+*/
+
+    () => {
+/* ^ Como podemos ver no lleva nombre*/
+        //Aqui van los argumentos de la funcion
+    }
+
+/*Las podemos declarar como una expresion asignandolas a una variable, por ejemplo*/
+
+    const arrowFunction = () => {
+        //Aqui van los argumentos de la funcion
+        
+    }
+    
 //Para importar archivos con funciones o funciones de otros archivos tenemos que usar la siguiente linea de codigo 
 
 /*Esta es la ultima version en nodejs, si no sirve usar la de abajo, la "vieja sintaxis"

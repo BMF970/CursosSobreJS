@@ -31,10 +31,10 @@ Básicamente tenemos 4 formas de leer nodos con JS:
 
 /*
     Para la agregacion de noos usamos 4 metodos fundamentales para el DOM, estos son
-        ·document. / parentElement.appendChild
-        ·document. / parentElement.append
-        ·document. / parentElement.insertBefore
-        ·document. / parentElement.insertAdjacentElement
+        ·document. / parentElement.appendChild()
+        ·document. / parentElement.append()<<< Intentar usar este, es el mas simple
+        ·document. / parentElement.insertBefore()
+        ·document. / parentElement.insertAdjacentElement()
 
     parentElement == al lugar donde queremos que agregue las cosas, por ejemplo...
 
@@ -45,7 +45,6 @@ Básicamente tenemos 4 formas de leer nodos con JS:
 
 //obviamente si ya hay un div creado o podriamos crearlo y ponerle una clase y pasarle la clase en vez de poner div o un ID etc; Ejecutar en about:blank para el ejemplos
 
-<<<<<<< HEAD
         const crearP = document.createElement("p");
         const textoDePrueba = document.createTextNode("p de prueba");
         document.body.appendChild(crearP);
@@ -104,21 +103,28 @@ Para usar el .remove(), es mas simple, simplemente nos aseguramos de obtener la 
     const crearP = document.createElement("p");
     const textoDePrueba = document.createTextNode("p de prueba");
     document.body.append(crearDiv);
+    //Podriamos hacerlo asi...
     crearDiv.append(crearH1);
     crearDiv.append(crearP);
     crearP.append(textoDePrueba);
     crearH1.append(textoDePrueba);
+    
+    //O asi...
+    crearDiv.append(crearH1, crearP/*Se pueden agregar multiples objetos con solo agregar una coma*/, crearP, crearP);
+    crearP.append(textoDePrueba);
+    crearH1.append(textoDePrueba);
+
 
     //Comprobar aqui que se haya creado todo correctamente y luego borramos con...
     
     crearH1.remove()
 //      ^   Aqui pondremos el elemento/nodo que querramos eliminar, pues si ponemos crearDiv.remove() se eliminara todo alv, incluyendo el h1 y el p
-=======
+
     const crearP = document.createElement("p");
     const textoDePrueba = document.createTextNode("p de prueba");
     document.body.appendChild(crearP);
     crearP.appendChild(textoDePrueba);
->>>>>>> 4f250359b4ba7136d707ebc993fc632e2849e599
+
 
 //Una de las formas de convertirlos a array es la vista en la clase:
 
@@ -128,7 +134,10 @@ Para usar el .remove(), es mas simple, simplemente nos aseguramos de obtener la 
     
     const nodeListArray = Array.from(nombreDelNodeList)
     
-    function creacion(tipo, cantidad/*referencia*/){
+
+
+    /*
+    function creacion(tipo, cantidad/*referencia/){
         if(tipo === "div" && cantidad > 0){
             for (let i = 0; i === cantidad; i++) {
                 const crearDiv = document.createElement("div");
@@ -141,6 +150,15 @@ Para usar el .remove(), es mas simple, simplemente nos aseguramos de obtener la 
             }
         }
     }
+
+
+
+
+
+
+
+
+
     function crear(x, cantidad){
         if (x ==  && cantidad > 0) {
             const crearDiv = document.createElement("div");
@@ -149,7 +167,8 @@ Para usar el .remove(), es mas simple, simplemente nos aseguramos de obtener la 
             const crearP = document.createElement("p");
             document.body.append(crearP);
         }
-    }
+    }*/
+    
         /*for (let i = 0; i === cantidad; i++) {
             switch (tipo) {
                 case tipo === `div`:
@@ -161,5 +180,5 @@ Para usar el .remove(), es mas simple, simplemente nos aseguramos de obtener la 
                     document.body.append(crearP);
                     break;
         }  
-        }*/
-    }
+        }
+    }*/

@@ -28,6 +28,15 @@ const persona = {
 console.log(persona["nombre"]);
 /*                 ^ se puede utilizar esto, pero lo mas comun es usar el punto (osea persona.nombre) aunque hay ocaciones donde si se tiene que hacer asi estrictamente*/
 
+objeto.prototype.metodoQueQueramosAgregar() = function{
+    //Aqui va el codigo que queramos agregar, de esta manera podremos agrega nuevos metodos, de hecho esto es mucho mejor y mas recomendable
+}
+/*
+Metodos de las funciones
+Podemos agregar metodos a las funciones, de la siguiente manera, lo que permitira que no se dupliquen estos metodos en todos, pues si solo necesitamos agregar uno o un par de metodos mas esto es lo ideal
+*/
+
+
 //Si tenemos un objeto de multiples caracteristicas independientes, podemos hacer una matriz de las propiedades de este objeto con el metodo .entries...
 
     // Object.entries 
