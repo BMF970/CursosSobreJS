@@ -18,3 +18,20 @@ try {
     //asi deberia de quedar...
     error
 }
+
+/*Condicional ternario
+El condicional ternario es un if...else, pero escrito de otra manera, lo podemos usar para ahorrar codigo si el if/else es muy corto, y este se escribe asi...
+*/
+    
+    (/*Algo*/)?/*Hacer algo, esta parte es el "if"*/:/*Hacer algo si lo anterior no se realizo, esta parte es el "else" */;
+    
+    //Tambien podemos colocarlo asi para poder organizarnos mejor
+    
+    (/*Algo*/)
+    ?/*Hacer algo, esta parte es el "if"*/
+    :/*Hacer algo si lo anterior no se realizo, esta parte es el "else" */
+
+    (/*Aqui ponemos lo que queremos validar*/true)
+        ?/*Aqui ponemos lo que pasara si la parte de arriba es verdadera*/console.log(`Hola mundo`)
+        :/*Esta parte es el "else" de la condicional ternaria*/
+        console.log(`Hola...`)

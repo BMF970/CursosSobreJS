@@ -1,5 +1,7 @@
 //var nombre = oscar;
 
+const { setTimeout } = require("timers/promises");
+
 var edad;
 
 console.log(edad)
@@ -105,6 +107,21 @@ console.log(potencia);
     const abcdGuiones = abcd.padEnd(10, `-·`)
     console.log(abcdGuiones)
 
+/*
+Variables con Strings
+Con la implementacion de ES6 ya no necesitamos del comando "\n", pues solo es necesario usar un enter, por ejemplo
+*/
+    let lorem3 = "Lorem ipsum dolor sit amet consectetur adipisicing " + "\nelit. Fugiat vel inventore illo facere maiores unde earum " + "\nvoluptatibus quisquam praesentium aliquid, facilis quas at quam. Ad"+ "\nnumquam repellat autem nesciunt rerum Nihil beatae saepe quod rem " 
+    let lorem3Mejorado = `
+    Lorem ipsum dolor sit amet consectetur adipisicing 
+    Lorem ipsum dolor sit amet consectetur adipisicing
+    Lorem ipsum dolor sit amet consectetur adipisicing
+    Lorem ipsum dolor sit amet consectetur adipisicing
+    `
+    console.log(lorem3);
+    setTimeout(() => {
+            console.log(lorem3Mejorado);
+    }, 5000);
 
 /*
 Scope:

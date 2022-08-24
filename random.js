@@ -118,3 +118,9 @@ let purosEspacios = `                  `
         return console.log(`Cantidad de palabras totales ${palabras}`)
     }
 contarPalabras(lorem10);    contarPalabras(frase);  contarPalabras(purosEspacios);
+
+const names = [
+    {name: `oscar`, age: 32},
+    {name: `Yesica`, age: 27},
+];
+let listOfNames = names.map(caracteristica => console.log(caracteristica.name))
