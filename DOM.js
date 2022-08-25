@@ -135,8 +135,16 @@ Para usar el .remove(), es mas simple, simplemente nos aseguramos de obtener la 
     const nodeListArray = Array.from(nombreDelNodeList)
     
 
+/*
+Para agregarle una clase a un elemento es cuestion de poner el metodo ".classList.add(``)", por ejemplo...
+    parent.classList.add(``);
+    Un ejemplo practico seria asi...
+*/
+    const crearDiv = document.createElement("div");
+    crearDiv.classList.add(`claseDelDiv`);
+    document.body.append(crearDiv);
 
-    /*
+/*
     function creacion(tipo, cantidad/*referencia/){
         if(tipo === "div" && cantidad > 0){
             for (let i = 0; i === cantidad; i++) {
