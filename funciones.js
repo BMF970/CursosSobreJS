@@ -68,10 +68,11 @@ Siguiendo el ejemplo anterior una arrow function seria asi
         
     }
     
-//Para importar archivos con funciones o funciones de otros archivos tenemos que usar la siguiente linea de codigo 
+//Importacion y exportacion de archivos
+    //Para importar archivos con funciones o funciones de otros archivos tenemos que usar la siguiente linea de codigo 
 
-/*Esta es la ultima version en nodejs, si no sirve usar la de abajo, la "vieja sintaxis"
-import aleatorio from `./modulos.js`*/
+    /*Esta es la ultima version en nodejs, si no sirve usar la de abajo, la "vieja sintaxis"*/
+    import aleatorio from `./modulos.js`
 
-const aleatorio = require(`./modulos`)
-console.log(aleatorio(1, 3));
+    /*const aleatorio = require(`./modulos`)
+    console.log(aleatorio(1, 3));*/
