@@ -124,3 +124,20 @@ const names = [
     {name: `Yesica`, age: 27},
 ];
 let listOfNames = names.map(caracteristica => console.log(caracteristica.name))
+
+let man, woman, porcMan, porcWoman, total, condition;
+condition =1
+while (condition === 1) {
+    man, woman, porcMan, porcWoman, total, condition = 0
+    console.log("¿Cuantos hombres hay en el grupo?");
+    prompt(man);
+    console.log("¿Cuantas mujeres hay en el grupo?");
+    prompt(man);
+    total=man+woman;
+    console.log(`El total de personas en el grupo es de ${total}`)
+    porcMan = (man*total)/man;
+    porcMan = (woman*total)/woman;
+    console.log(`El porcentaje de hombres en el grupo es de ${porcMan}, y el porcentaje de mujeres es de ${porcWoman}`)
+    prompt("Quieres volver a operar?")
+
+}

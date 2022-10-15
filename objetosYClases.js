@@ -24,6 +24,21 @@ const persona = {
         this.telefonno + this.edad
     }
 }
+//Los setters son partes en un objeto que nos permite cambiar las partes y/o caracteristicas de un pbjeto, se colocarian como un metodo y funcion, tomando como parametros las caracteristicas que queremos cambiar, por ejemplo...
+const persona2 = {
+        nombre: `Pablo`,
+        apellidos: `Martinez`,
+        telefonno: 4444015094,
+        edad: 21
+        calc(){
+            this.telefonno + this.edad
+        }
+        set setterCambiadorDeNombres(nameCambiado){
+            this.nombre = nameCambiado;
+        }
+    }
+    
+
 
 console.log(persona["nombre"]);
 /*                 ^ se puede utilizar esto, pero lo mas comun es usar el punto (osea persona.nombre) aunque hay ocaciones donde si se tiene que hacer asi estrictamente*/
